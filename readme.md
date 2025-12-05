@@ -7,3 +7,11 @@
 1. Persona que puede ser jugador o Croupier, la persona tiene mano y sumatorio de puntos
     1. Jugador: Atributo dinero y método para apostar
     1. Croupier: sus puntos están ocultos y una de las cartas también. Gestiona la baraja. 
+
+## Tareas
+[x]Crear la carta y sus atributos
+[x]Crear la baraja y sus atributos
+[]Crear la mano y sus atributos
+[]Crear la persona y sus atributos
+[]Crear el jugador y sus atributos
+[]Crear el croupier y sus atributos

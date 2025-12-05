@@ -3,8 +3,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Baraja {
-    Carta[] baraja;
-
+    Carta[] baraja; 
+    
     public void barajear(){
         //he encontrado este método (Collections.shuffle) para mezclar arrays, pero se 
         //usa con objetos lista y no con objetos array
