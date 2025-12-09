@@ -1,7 +1,7 @@
 # Juego de BlackJack
 
 ## Distintos objetos identificados:
-1. Carta: es el un objeto con dos atributos: nombre palo y representación gráfica. Crear dos Sets uno con nombres y otro palos, con el producto cartesiano se genera la representación gráfica. Los valores se escriben en una función auxiliar.
+1. Carta: es el un objeto con tres atributos: nombre, palo y representación gráfica. Crear dos Sets uno con nombres y otro palos, con el producto cartesiano se genera la baraja entera. Los valores se escriben en una función auxiliar. Hay problemas con el unicode y las terminales así que usaremos letras para los palos T (tréboles) P (picas) D (diamantes) C (corazones)
 1. Baraja: tiene 52 cartas, podemos crear la baraja siendo un array de las 52 cartas pero tenemos que conseguir que sean únicas. Incluye un método para mezclarlas.
 1. Mano: recibe cartas de la baraja, sus atributos son: número de cartas y sí son visibles o no (no sé si esto es propio de la carta o de la mano solo del Croupier). Incluye métodos para añadir o quitar una carta (cuando acaba el turno)
 1. Persona que puede ser jugador o Croupier, la persona tiene mano y sumatorio de puntos
