@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
@@ -6,28 +5,20 @@ import java.util.List;
 import java.util.Set;
 
 public class Baraja {
-    Carta[] baraja;
-    //Set<List<Carta>> baraja = new HashSet<>();
-
-    //el problema es que no ve la lista de objetos carta como una lista de objetos
-
+    Carta[] baraja =  new Carta[52];   
+    
     public Baraja() {     
-        ArrayList<String> valores = new ArrayList<>();
-        Set<String> setValor = new HashSet<>(Arrays.asList("1", "2", "3", "4","5","6","7","8","9","10","J","Q","K"));
+        Set<String> setValor = new HashSet<>(Arrays.asList("A", "2", "3", "4","5","6","7","8","9","10","J","Q","K"));
         Set<Character> setPalo = new HashSet<>(Arrays.asList('D', 'C', 'P', 'T'));
-
-        //se puede cambiar esto a un array? para q luego se pueda poner = a baraja o como hacemos esto
-
-        Set<List<Object>> cartesianProduct = new HashSet<>();
-
-         for (String i: setValor) {
-            for (Character j: setPalo) {           
-                List<Object> tuple = Arrays.asList(i,j);
-                cartesianProduct.add(tuple);   
-         }
+        int cont =0;
+        for (String i: setValor) {
+            for (Character j: setPalo) {   
+                Carta card =new Carta(i,j);
+                this.baraja[cont]=(card);
+                cont++;
+            }
         }
-        this.baraja=cartesianProduct;
-
+        this.baraja[10].pintarCarta();
     }
 
     public void barajear() {
@@ -42,5 +33,10 @@ public class Baraja {
         // Se pasa a array
         Carta[] barajaMezclada = barajaLista.toArray(new Carta[0]);
         this.baraja = barajaMezclada;
+        this.baraja[10].pintarCarta();
+    }
+    public static void main(){
+        Baraja baraja = new Baraja();
+        baraja.barajear();    
     }
 }
