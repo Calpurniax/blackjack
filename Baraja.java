@@ -18,7 +18,6 @@ public class Baraja {
                 cont++;
             }
         }
-        this.baraja[10].pintarCarta();
     }
 
     public void barajear() {
@@ -32,8 +31,7 @@ public class Baraja {
 
         // Se pasa a array
         Carta[] barajaMezclada = barajaLista.toArray(new Carta[0]);
-        this.baraja = barajaMezclada;
-        this.baraja[10].pintarCarta();
+        this.baraja = barajaMezclada;   
     }
     public static void main(){
         Baraja baraja = new Baraja();
