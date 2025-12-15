@@ -1,6 +1,6 @@
 public class Carta{
-    String valor;
-    char palo;
+    private String valor;
+    private char palo;
     private int puntos;
 
     public Carta(String valor, char palo){
