@@ -42,8 +42,11 @@ public class Baraja {
         baraja.barajear(); 
         Carta lastCard = baraja.getCard(51);
         lastCard.pintarCarta();
-        int valor = Valores.getValor(lastCard);
-        System.out.println("el valor de la última carta es "+ valor); 
+         
+        int valor = lastCard.getPuntos();
+
+       // int valor = Valores.getValor(lastCard);
+       System.out.println("el valor de la última carta es "+ valor); 
 
     }   
 }
