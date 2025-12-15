@@ -47,6 +47,9 @@ public class Baraja {
 
        // int valor = Valores.getValor(lastCard);
        System.out.println("el valor de la última carta es "+ valor); 
+       Crupier cr = new Crupier(baraja);       
+       cr.pintarCarta();
+
 
     }   
 }

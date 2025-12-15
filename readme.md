@@ -6,7 +6,7 @@
 1. Mano: recibe cartas de la baraja, sus atributos son: array de cartas, y sí son visibles o no (no sé si esto es propio de la carta o de la mano solo del Crupier). Incluye métodos para añadir o quitar una carta (cuando acaba el turno), calcula la puntuación del jugador y del crupier y calcula el valor del as si se pasa de 21.
 1. Persona que puede ser jugador o Crupier, la persona tiene mano y sumatorio de puntos
     1. Jugador: Atributo dinero y método para apostar
-    1. Crupier: sus puntos están ocultos y una de las cartas también. Gestiona la baraja: método para repartir las cartas.
+    1. Crupier: sus puntos están ocultos y una de las cartas también, el método para imprimir su carta oculta es propio de la persona crupier y no del objeto carta que tenga en la mano. Gestiona la baraja: método para repartir las cartas.
 
 
 ## Tareas

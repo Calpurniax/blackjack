@@ -8,5 +8,14 @@ public class Crupier extends Persona{
    public Carta repartir(int position){
        return this.baraja.getCard(position);
    }
+
+    public void pintarCarta(){
+        System.out.println(" ___");
+        System.out.println("|#   |");
+        System.out.println("| ## |");
+        System.out.println("|___#");
+    } 
+    
+
     
 }
