@@ -33,8 +33,17 @@ public class Baraja {
         Carta[] barajaMezclada = barajaLista.toArray(new Carta[0]);
         this.baraja = barajaMezclada;   
     }
+
+    public Carta getCard(int position){
+        return baraja[position]; 
+    }
     public static void main(){
         Baraja baraja = new Baraja();
-        baraja.barajear();    
-    }
+        baraja.barajear(); 
+        Carta lastCard = baraja.getCard(51);
+        lastCard.pintarCarta();
+        int valor = Valores.getValor(lastCard);
+        System.out.println("el valor de la última carta es "+ valor); 
+
+    }   
 }
