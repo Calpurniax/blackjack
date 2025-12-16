@@ -5,8 +5,8 @@ public class Crupier extends Persona{
         this.baraja=baraja;
     }
 
-   public Carta repartir(int position){
-       return this.baraja.getCard(position);
+   public Carta repartir(){
+       return this.baraja.getCard();
    }
 
     public void pintarCarta(){
