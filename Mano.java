@@ -11,33 +11,34 @@ public class Mano {
         this.manoVisible = manoVisible;
     }
 
-    // para añadir carta a la mano
+    // metodo para añadir una carta a la mano.
+    //Recibe una carta como parámetro.
     public void añadirCarta(Carta carta) {
         cartas.add(carta);
     }
 
-    // para vaciar la mano cuando termina la ronda
+    // metodo para vaciar la mano cuando termina la ronda
     public void limpiarMano() {
         cartas.clear();
     }
 
-    // Calcular los puntos totales
+    // para calcular los puntos totales
     public int calcularPuntos() {
-        int total = 0;
+        int total = 0; 
         int ases = 0;
 
         // Sumamos los puntos
         for (Carta cart : cartas) {
             total += cart.getPuntos();
-            if (cart.getPuntos() == 11) {
-                ases++; //incremento valor del as
+            if (cart.getPuntos() == 11) { //Sumamos los puntos de cada carta.
+                ases++;                   //Si una carta vale 11, significa que es un As, y lo contamos.
             }
         }
 
         // usamos un while por si nos pasamos de 21 y convertimos el as de 11 a 1
         while (total > 21 && ases > 0) {
             total -= 10; //
-            ases--; //reduzco el valor del as
+            ases--; //reduzco el valor del as restantdo 10 
         }
         return total;
     }
