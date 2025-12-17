@@ -5,23 +5,24 @@ public class Mano {
     private ArrayList<Carta> cartas;
     private boolean manoVisible; //
 
-    // Constructor
+    // Constructor para crear el objeto
     public Mano(boolean manoVisible) {
         this.cartas = new ArrayList<>();
         this.manoVisible = manoVisible;
     }
 
-    // para añadir carta a la mano
+    // metodo para añadir una carta a la mano.
+    //Recibe una carta como parámetro.
     public void añadirCarta(Carta carta) {
         cartas.add(carta);
     }
 
-    // para vaciar la mano cuando termina la ronda
+    // metodo para vaciar la mano cuando termina la ronda
     public void limpiarMano() {
         cartas.clear();
     }
 
-    // Calcular los puntos totales
+    // para calcular los puntos totales
     public int calcularPuntos() {
         int total = 0;
         int ases = 0;

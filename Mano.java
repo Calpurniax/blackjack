@@ -30,15 +30,15 @@ public class Mano {
         // Sumamos los puntos
         for (Carta cart : cartas) {
             total += cart.getPuntos();
-            if (cart.getPuntos() == 11) { //Sumamos los puntos de cada carta.
-                ases++;                   //Si una carta vale 11, significa que es un As, y lo contamos.
+            if (cart.getPuntos() == 11) {
+                ases++; //incremento valor del as
             }
         }
 
         // usamos un while por si nos pasamos de 21 y convertimos el as de 11 a 1
         while (total > 21 && ases > 0) {
             total -= 10; //
-            ases--; //reduzco el valor del as restantdo 10 
+            ases--; //reduzco el valor del as
         }
         return total;
     }
