@@ -24,13 +24,18 @@ public class Baraja {
     }
 
     public Carta getCard(){
-        return baraja.get(0); 
+        return baraja.remove(0); 
+    }
+    public void getLenght(){
+        System.out.println(baraja.size());
     }
 
     public static void main(){
         Baraja baraja = new Baraja();
         baraja.barajear(); 
+        baraja.getLenght();
         Carta lastCard = baraja.getCard();
+        baraja.getLenght();
         lastCard.pintarCarta();
          
         int valor = lastCard.getPuntos();

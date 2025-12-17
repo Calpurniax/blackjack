@@ -9,11 +9,11 @@ public class Main {
         Mano manoCrupier = new Mano(true); //crea la mano del crupier
 
         //Reparte las cartas iniciales
-        manoJugador.añadirCarta(baraja.getCard(0));
-        manoJugador.añadirCarta(baraja.getCard(1));
+        manoJugador.añadirCarta(baraja.getCard());
+        manoJugador.añadirCarta(baraja.getCard());
 
-        manoCrupier.añadirCarta(baraja.getCard(2));
-        manoCrupier.añadirCarta(baraja.getCard(3));
+        manoCrupier.añadirCarta(baraja.getCard());
+        manoCrupier.añadirCarta(baraja.getCard());
 
         //muestra el inicio del juego
         System.out.println("BLACKJACK \n");
