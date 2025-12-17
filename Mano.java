@@ -24,7 +24,7 @@ public class Mano {
 
     // para calcular los puntos totales
     public int calcularPuntos() {
-        int total = 0; 
+        int total = 0;
         int ases = 0;
 
         // Sumamos los puntos
