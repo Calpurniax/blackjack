@@ -3,11 +3,7 @@ public class Crupier extends Persona{
 
     public Crupier (Baraja baraja){
         this.baraja=baraja;
-    }
-
-   public Carta repartir(){
-       return this.baraja.getCard();
-   }
+    }   
 
     public void pintarCarta(){
         System.out.println(" ___");
