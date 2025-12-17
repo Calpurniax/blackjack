@@ -1,4 +1,4 @@
 public class Persona {
-    //Mano mano;
+    Mano mano;
     
 }
