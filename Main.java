@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -5,17 +7,19 @@ public class Main {
         Baraja baraja = new Baraja();
         baraja.barajear();
 
-        Mano manoJugador = new Mano(true); //crea la mano del jugador
-        Mano manoCrupier = new Mano(true); //crea la mano del crupier
+        Mano mano1 = new Mano(true); // crea la mano del jugador
+        Jugador player = new Jugador(mano1);
+        Mano mano2 = new Mano(false); // crea la mano del crupier
+        Crupier cr = new Crupier(mano2);
 
-        //Reparte las cartas iniciales
-        manoJugador.añadirCarta(baraja.getCard());
-        manoJugador.añadirCarta(baraja.getCard());
+        // Reparte las cartas iniciales
+        cr.addCard(baraja.getCard());
+        player.addCard(baraja.getCard());
 
-        manoCrupier.añadirCarta(baraja.getCard());
-        manoCrupier.añadirCarta(baraja.getCard());
+        Scanner sc = new Scanner(System.in);
+      
 
-        //muestra el inicio del juego
+        // muestra el inicio del juego
         System.out.println("BLACKJACK \n");
 
         System.out.println("Reglas:" + "\n" +
@@ -31,23 +35,29 @@ public class Main {
                 "\n" +
                 "(S) Stand: plantarse y dejar de pedir cartas." +
                 "\n" +
-                "En tu primera jugada puedes elegir (D) Double Down para duplicar tu apuesta, pero debés pedir exactamente una carta más antes de plantarte." +
+                "En tu primera jugada puedes elegir (D) Double Down para duplicar tu apuesta, pero debés pedir exactamente una carta más antes de plantarte."
+                +
                 "\n" +
                 "En caso de empate, la apuesta se devuelve al jugador." +
                 "\n" +
-                "El crupier deja de pedir cartas cuando llega a 17. \n");
+                "El crupier deja de pedir cartas cuando llega a 17. "+"\n"+
+                "Pulsa cualquier tecla para continuar");
+            
+            sc.nextLine();
 
-        System.out.println("=== JUGADOR ===");
+        // aqui iria el dinero total del jugador
+        // tambien otra linea que ponga cuanto queremos apostar o si queremos salir del
+        // juego
 
-        //aqui iria el dinero total del jugador
-        //tambien otra linea que ponga cuanto queremos apostar o si queremos salir del juego
+        // aqui deberia ir la parte en la que nos pregunta si queremos pedir otra carta
+        // (H)
+        // plantarse y dejar de pedir cartas (S), duplicar tu apuesta (D)
 
-        manoJugador.mostrarMano(); //mostramos la mano del jugador
-
-        //aqui deberia ir la parte en la que nos pregunta si queremos pedir otra carta (H)
-        //plantarse y dejar de pedir cartas (S), duplicar tu apuesta (D)
-
+        // manoCrupier.mostrarMano(); //mostramos la mano del crupier
         System.out.println("\n=== CRUPIER ===");
-        manoCrupier.mostrarMano(); //mostramos la mano del crupier
+        cr.showCards();
+        System.out.println("=== JUGADOR ===");
+        player.showCards(); // mostramos la mano del jugador
+        
     }
 }

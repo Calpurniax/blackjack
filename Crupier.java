@@ -1,10 +1,14 @@
-public class Crupier extends Persona{
-    Baraja baraja;
+public class Crupier extends Persona{   
+    
 
-    public Crupier (Baraja baraja){
-        this.baraja=baraja;
+    //constructor, necesita una mano con visible = false
+    public Crupier (Mano mano){
+        super(mano);
     }   
 
+    public void showCards(){
+        pintarCarta();
+    }
     public void pintarCarta(){
         System.out.println(" ___");
         System.out.println("|#   |");
