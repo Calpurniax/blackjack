@@ -14,12 +14,13 @@ public class Main {
 
         // Reparte las cartas iniciales
         cr.addCard(baraja.getCard());
+        cr.addCard(baraja.getCard());
+        player.addCard(baraja.getCard());
         player.addCard(baraja.getCard());
 
-        Scanner sc = new Scanner(System.in);
-      
+        Scanner sc = new Scanner(System.in);      
 
-        // muestra el inicio del juego
+       // Muestra el inicio del juego
         System.out.println("BLACKJACK \n");
 
         System.out.println("Reglas:" + "\n" +
@@ -43,21 +44,19 @@ public class Main {
                 "El crupier deja de pedir cartas cuando llega a 17. "+"\n"+
                 "Pulsa cualquier tecla para continuar");
             
-            sc.nextLine();
+           sc.nextLine();
 
-        // aqui iria el dinero total del jugador
-        // tambien otra linea que ponga cuanto queremos apostar o si queremos salir del
-        // juego
+        // Aqui iria el dinero total del jugador (está dentro del jugador)
+        // informar de que la apuesta para inciar el juego es x y se descuenta automáticamente del total
 
-        // aqui deberia ir la parte en la que nos pregunta si queremos pedir otra carta
-        // (H)
-        // plantarse y dejar de pedir cartas (S), duplicar tu apuesta (D)
-
-        // manoCrupier.mostrarMano(); //mostramos la mano del crupier
         System.out.println("\n=== CRUPIER ===");
         cr.showCards();
         System.out.println("=== JUGADOR ===");
         player.showCards(); // mostramos la mano del jugador
+
+        // aqui deberia ir la parte en la que nos pregunta si queremos pedir otra carta
+        // (H)
+        // plantarse y dejar de pedir cartas (S), duplicar tu apuesta (D)  
         
     }
 }

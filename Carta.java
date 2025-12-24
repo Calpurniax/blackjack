@@ -7,25 +7,34 @@ public class Carta{
         this.valor=valor;
         this.palo=palo;
         pointsCart();
-
     }
-    //función set para poder cambiar el as para que valga 1 
-    //si te pasas de 21
+    /*función set para poder cambiar el as para que valga 1 
+    si te pasas de 21*/
     public void setPuntos(int puntos){
         this.puntos = puntos;
     }
+    /*Metodo para acceder a los puntos de cada carta */
     public int getPuntos(){
         return this.puntos;
     }
-
-    public void pintarCarta(){
-        System.out.println(" ___");
-        System.out.println("|"+this.valor +"  |");
-        System.out.println("| "+ this.palo +" |");
-        System.out.println("|__"+this.valor);
+    /* Método para pintar las cartas, devuelve un array de strings */
+    public String[] pintarCarta(){
+        //descuadra la imagen cuando es un 10 porque tiene dos cifras, asi que hay que poner un espacio menos en la segunda línea
+        if(this.valor=="10"){
+            String[] cartaString = { " ____     ", "|"+this.valor +"  |    ", "|  "+ this.palo +" |    ", "|___"+this.valor+"     "};
+            return cartaString;
+        }
+        String[] cartaString = { " ____     ", "|"+this.valor +"   |    ", "|  "+ this.palo +" |    ", "|___"+this.valor+"     "};
+        return cartaString;
     } 
-    
-     public void pointsCart() {
+    /*Método para la primera carta del crupier */
+     public String[] pintarCartaOculta(){
+        String[] cartaString = { " ___     ", "|#   |   ", "| ## |   ", "|__#     "};
+        return cartaString;       
+    } 
+
+    /*Método para calcular los puntos de cada carta */
+    public void pointsCart() {
         switch (this.valor) {
             case "A":
                 this.puntos = 11;
