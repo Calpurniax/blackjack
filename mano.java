@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Mano {
 
@@ -39,7 +40,7 @@ public class Mano {
         // usamos un while por si nos pasamos de 21 y convertimos el as de 11 a 1
         while (total > 21 && ases > 0) {
             total -= 10; //
-            ases--; // reduzco el valor del as
+            ases--; //reduzco el valor del as
         }
         return total;
     }
