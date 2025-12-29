@@ -13,8 +13,8 @@ public class Persona {
         this.mano.limpiarMano();
     }
     /*Método para calcular los puntos de la mano a través del método suyo*/
-    public void getPoints(){
-        this.mano.calcularPuntos();
+    public int getPoints(){
+       return this.mano.calcularPuntos();
     }
     /*Método para enseñar las cartas de la mano a través del método suyo*/
      public void showCards(){

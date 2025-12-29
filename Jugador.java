@@ -13,4 +13,5 @@ public class Jugador extends Persona{
     public int getMoney(){
         return this.bote;
     }
+    
 }
